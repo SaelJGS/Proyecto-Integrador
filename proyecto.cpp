@@ -38,7 +38,9 @@ void registrarProductos()
             cout << "Precio: ";
             cin >> productos[i].precio;
             if (productos[i].precio <= 0)
+            {
                 cout << "ERROR: el precio debe ser mayor a 0.\n";
+            }
         } while (productos[i].precio <= 0);
 
         // Validación de cantidad (> 0)
@@ -47,7 +49,9 @@ void registrarProductos()
             cout << "Cantidad: ";
             cin >> productos[i].cantidad;
             if (productos[i].cantidad <= 0)
+            {
                 cout << "ERROR: la cantidad debe ser mayor a 0.\n";
+            }
         } while (productos[i].cantidad <= 0);
 
         cout << endl;
@@ -298,7 +302,9 @@ void generarReporte()
     for (int i = 1; i < dimension; i++)
     {
         if (productos[i].cantidad > productos[mayor].cantidad)
+        {
             mayor = i;
+        }
     }
 
     cout << "==== REPORTE FINAL ====\n";
